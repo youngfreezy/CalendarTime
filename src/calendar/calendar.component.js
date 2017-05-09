@@ -1,7 +1,7 @@
 import '../../node_modules/ng-dialog/css/ngDialog.min.css';
 import '../../node_modules/ng-dialog/css/ngdialog-theme-default.min.css';
 
-function HomeController(HoursService, ngDialog) {
+function CalendarController(HoursService, ngDialog) {
     const $ctrl = this;
     $ctrl.$onInit = function() {
         this.hoursService = HoursService;
@@ -39,9 +39,9 @@ function HomeController(HoursService, ngDialog) {
 
 }
 
-const homeComponent = {
-    template: require('./home.html'),
-    controller: HomeController
+const calendarComponent = {
+    template: require('./calendar.html'),
+    controller: CalendarController
 };
 
-export default homeComponent;
+export default calendarComponent;

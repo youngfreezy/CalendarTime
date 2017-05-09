@@ -3,7 +3,7 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-sanitize';
 
-import Home from './home';
+import Calendar from './calendar';
 
 import appComponent from './application.component';
 
@@ -11,14 +11,14 @@ import './app.scss';
 
 
 angular
-    .module('synopsis', ['ui.router', 'ngSanitize', Home])
+    .module('synopsis', ['ui.router', 'ngSanitize', Calendar])
     .config(($locationProvider) => {
         "ngInject"; // ng-annotate doesn't handle arrow functions automatically; need to add the directive prologue.
         $locationProvider.html5Mode(true);
     })
     .config(($urlRouterProvider) => {
         "ngInject"; // ng-annotate doesn't handle arrow functions automatically; need to add the directive prologue.
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/calendar');
     })
     .component('app', appComponent);
 
