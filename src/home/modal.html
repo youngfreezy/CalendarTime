@@ -1,0 +1,11 @@
+<div class="flex-column">
+	NAME: <input type="" name="" ng-model="$ctrl.hourClicked.name">
+	NUMBER: <input type="" name="" ng-model="$ctrl.hourClicked.number">
+	<div ng-if="$ctrl.hourClicked.name">Name: {{$ctrl.hourClicked.name}}</div>
+	<!-- apply ng-pattern/regex for inputs? -->
+	<div ng-if="$ctrl.hourClicked.number">Contact Number: {{$ctrl.hourClicked.number}}</div>
+	<div class="flex-centered">
+		<button ng-click="$ctrl.save()">SUBMIT</button>
+		<button ng-click="$ctrl.clear()">Clear</button>
+	</div>
+</div>

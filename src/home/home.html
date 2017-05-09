@@ -1,0 +1,18 @@
+<div class="flex-centered"> <b>Pick a time... </b></div>
+<div class="container home-container">
+	<div class="row">
+		<div ng-repeat="hour in $ctrl.hours"
+			ng-class="{red: hour.booked, green: !hour.booked}"
+			ng-click="$ctrl.clickToOpen(hour)"
+			>
+			<div class="text-center time-slot" >
+				<span ng-if="hour.name && hour.number">
+					<h3>{{ hour.name }} - {{hour.number}}</h3>
+				</span>
+				<span>
+					<h3>{{ hour.start }} - {{ hour.end }}</h3>
+				</span
+			</div>
+		</div>
+	</div>
+</div>
